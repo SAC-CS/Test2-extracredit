@@ -2,7 +2,7 @@ public class Test2extracredit {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-		Dice ODice = new Dice();
+		Dice Dice = new Dice();
 		int choice=0;
 		
 		
