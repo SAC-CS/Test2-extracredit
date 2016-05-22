@@ -1,0 +1,102 @@
+public class Automobile {
+	private int year;
+	private String make;
+	private String model;
+	private String color;
+	private String name;
+	private int gears=0;
+	private int gear = 0;
+	private int cycle = 0;
+	private int speed = 0;
+	private double dis = 0.0;
+
+	public Automobile(){}
+	
+	public Automobile (int year, String make, String model, String color, String name, int gears)
+	{
+		this.year = year;
+		this.make = make;
+		this.model = model;
+		this.color = color;
+		this.name = name;
+		this.gears = gears;
+	}
+	
+	public void setMake(String make)
+	{
+		this.make = make;
+	}
+		
+	public void setYear(int year)
+	{
+		this.year = year;
+	}
+
+
+	public void setColor(String color)
+	{
+		this.color = color;
+	}
+
+	public void setName(String name)
+	{
+		this.name = name;
+	}
+
+	public void setModel(String model)
+	{
+		this.model = m;
+	}
+	public String getName()
+	{
+		return name;
+	}
+	public void setNumberOfGears (int gears)
+	{
+		this.gears = gears;
+	}
+	public void setCycle(int cycle)
+	{
+		this.cycle = cycle;
+	}
+	public int getCycle()
+	{
+		return cycle;
+	}
+
+	public int getNumberOfGears()
+	{
+		return nGears;
+	}
+
+	
+	
+	public void Drive(int cycle)
+	{
+		setCycle(cycle);
+		if (gear < gears)
+		{
+			gear++;
+		}
+		speed = gear*10;
+		dis= dis + speed/60.0;
+	}
+
+	public double getDis()
+	{
+		return dis;
+	
+	}
+		
+	public int getGear()
+	{
+		return gear;
+	}
+	
+	
+	public String toString()
+	{
+		return String.format("\n Automobile : Year: %d Make: %s Model: %s Color: %s Name: %s Gears: %d  Current Cycle: %d Current Gear: %d Current Speed: %d Distance: %s", year, make, model, color, name, gears, cycle, gear, speed, String.format("%1$,.2f", dis));
+ 	}
+
+}
