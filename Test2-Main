@@ -1,0 +1,72 @@
+public class Test2extracredit {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		Dice ODice = new Dice();
+		int choice=0;
+		
+		
+		do {
+		
+
+		Automobile sportCar = new Automobile(2015, "Mec", "C200", "Black", "Papa", 5);
+		Automobile truck = new Automobile(2015, "Audi", "A8L", "Black", "Mama", 3);
+		Automobile van = new Automobile(2015, "Bmw", "528i", "Black", "Baby",6);
+
+		System.out.println(sportCar);
+		System.out.println(truck);
+		System.out.println(van);
+
+		Automobile car = new Automobile();
+
+		System.out.println(" What your car ? : ");
+		
+		System.out.print("What year of your car ? : ");
+		car.setYear(input.nextInt());
+		
+		System.out.print("What make of your car: ");
+		input.nextLine();
+		car.setMake(input.nextLine());
+		
+		System.out.print("What the model of your car: ");
+		car.setModel(input.nextLine());
+
+		System.out.print("What the name of your car: ");
+		car.setName(input.nextLine());
+		
+		System.out.print("What is the color of the car: ");
+		car.setColor(input.nextLine());
+		
+				
+		System.out.print("How many gears of your transmission: ");
+		car.setNumberOfGears(input.nextInt());
+		
+		System.out.printf("This is the car you \"claim\" to own %s.\n",car);
+		
+		System.out.print("\nEnter the number of dice  : ");
+
+ 
+		int cycle = Dice.Throw(input.nextInt());
+		
+		for (int i=1; i <= cycle; i++)
+		{
+			System.out.println("Cycle = " + i);
+			van.drive(i);
+			truck.drive(i);			
+			car.drive(i);
+			sportCar.drive(i);
+			
+						
+			System.out.println(sportCar);
+			System.out.println(van);
+			System.out.println(truck);
+			System.out.println(car);
+		}
+		
+		System.out.print(" Again? (Yes=1/No=0");
+		
+		choice = input.nextInt();
+		} while(choice == 1);
+	}
+
+}
