@@ -1,0 +1,40 @@
+public class Dice {
+
+private int NumberRoll;
+private int NumberDice;
+
+public Dice(){}
+
+public Dice(int dice, int roll){
+	
+	NumberDice = dice;
+	NumberRoll = roll;
+}
+
+
+public void setRoll(int roll){
+	NumberRolls = rolls;
+}
+
+public int getRoll(){
+	return NumberRoll;
+}
+
+public void setDice(int dice){
+	NumberDice = dice;
+}
+
+
+public int getDice(){
+	return NumberDice;
+}
+
+public static int Throw(int dice){
+	int DiceNumber = (dice * ((1 + (int)(Math.random()*6))));
+	return DiceNumber;
+}
+
+public String toString(){
+	return String.format("You want to roll %s dice and throw them %s times.", NumberDice, NumberRoll);
+}
+}
